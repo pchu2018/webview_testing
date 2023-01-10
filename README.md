@@ -1,0 +1,1 @@
+basic webview test for loading a webview into the sidebar under a custom tab with an icon.

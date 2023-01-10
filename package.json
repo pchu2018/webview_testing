@@ -1,0 +1,51 @@
+{
+  "name": "webview_testing",
+  "version": "1.0.0",
+  "description": "vscode webview testing",
+  "author": "pchu2018",
+  "license": "ISC",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:webviewTest.testView"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "test-sidebar",
+					"title": "Test Sidebar",
+					"icon": "media/Thumbs-Up-Silhouette.png"
+				}
+			]
+		},
+    "views": {
+      "test-sidebar": [
+        {
+          "type": "webview",
+          "id": "test.testView",
+          "name": "Test"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4",
+    "vscode-test": "^1.6.1"
+  }
+}
